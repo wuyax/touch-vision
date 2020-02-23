@@ -1,0 +1,26 @@
+// flex display
+// use case @include flex(space-between,center,column)
+@mixin flex(
+  $justify: flex-start,
+  $align-items: center,
+  $dir: row,
+  $wrap: nowrap,
+  $align-content: stretch
+) {
+  display: flex;
+  flex-flow: $dir $wrap;
+  justify-content: $justify;
+  align-items: $align-items;
+  align-content: $align-content;
+}
+
+//渐变
+@mixin linear($color1: #000, $color2: #fff, $angle: 180deg) {
+  background: ($color1 + $color2)/2;
+  background: linear-gradient($angle, $color1, $color2);
+}
+
+//过度动画
+@mixin animation($sec: 0.2s, $prop: all, $ease: ease-in) {
+  transition: $prop $sec $ease;
+}

@@ -1,15 +1,12 @@
 <template>
-  <div class="home">
-    <div aspectratio w-188-246 class="aspect-box">
-      <img aspectratio-content alt="logo"
-        src="../assets/img/logo.svg" />
-    </div>
+  <div class="useful-comp">
+    <p class="discribe">内置有用的公共组件</p>
   </div>
 </template>
 <script>
 // https://cn.vuejs.org/v2/style-guide/#组件-实例的选项的顺序-推荐
 export default {
-  name: 'Home',
+  name: 'UsefulComp',
   components: {},
   model: {},
   props: {},
@@ -25,11 +22,4 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-$asp: aspect-ratio;
-.home {
-}
-
-[w-188-246] {
-  $asp: '188:246';
-}
 </style>
