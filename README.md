@@ -38,4 +38,4 @@ npm run lint
 
 - `pritter` &  `selint`集成
 - 组件示例编写
-- 文档发布
+- 文档发布部署

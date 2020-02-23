@@ -8,6 +8,3 @@ table { border-collapse: collapse; border-spacing: 0; }
 a { text-decoration: none; }
 body { margin: 0; font-size: 32px; font-family: -apple-system,Helvetica,sans-serif; line-height: 1.5; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
 input[type="text"], textarea, select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
-[w-188-246] {
-  aspect-ratio: '183:150';
-}
