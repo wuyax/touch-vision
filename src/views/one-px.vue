@@ -58,6 +58,7 @@ export default {
 }
 .example {
   border: 1px solid transparent;
+  // 并不是所有的设备都支持
   border-image: svg(1px-border param(--color #00b1ff)) 2 2 stretch;
 }`,
       code2: `.example {

@@ -36,6 +36,11 @@ const routes = [
     component: () => import('../views/useful-comp.vue')
   },
   {
+    path: '/aspectratio',
+    name: 'aspectratio',
+    component: () => import('../views/aspect-ratio.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

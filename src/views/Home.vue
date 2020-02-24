@@ -30,15 +30,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.home {}
-</style>
-<style scoped>
+.aspect-box {
+  aspect-ratio: '183:150';
+}
 .aspect-box {
   width: 400px;
   margin: 100px auto 100px;
 }
-
-.aspect-box {
-  aspect-ratio: '16:9';
-}
-</style>>
+</style>

@@ -6,6 +6,7 @@
     <router-link :to='{ name: "proxy"}'>代理</router-link>
     <router-link :to='{ name: "template"}'>内置模版</router-link>
     <router-link :to='{ name: "usefulcomp"}'>内置组件</router-link>
+    <router-link :to='{ name: "aspectratio"}'>容器</router-link>
     <router-link :to='{ name: "About"}'>关于</router-link>
   </nav>
 </template>
