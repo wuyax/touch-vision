@@ -19,7 +19,7 @@ export default {
   <div class="class-name">
     <!-- your code goes here -->
   </div>
-</template\>
+</template>
 <script>
 // https://cn.vuejs.org/v2/style-guide/#组件-实例的选项的顺序-推荐
 export default {
@@ -37,7 +37,7 @@ export default {
   beforeDestroy() {},
   methods: {}
 }
-<\/script>
+< /script>
 <style lang="scss" scoped>
 </style>
 `
