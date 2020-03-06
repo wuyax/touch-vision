@@ -5,10 +5,10 @@ module.exports = {
   },
   extends: [
     'plugin:vue/essential',
-    // 'eslint:recommended',
+    'eslint:recommended',
     // 'plugin:prettier/recommended'
   ],
-  // plugins: ['vue','prettier'],
+  plugins: ['vue','prettier'],
   parserOptions: {
     parser: 'babel-eslint'
   },

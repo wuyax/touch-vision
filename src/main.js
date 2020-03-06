@@ -12,7 +12,7 @@ import xhr from '@/assets/api'
 // directive
 // use case <pre v-highlightjs="code"><code class="javascript"></code></pre>
 import vueHighlightJS from '@/assets/js/plugins/vue-highlight.js'
-import '@/assets/directives/vue-rpage.js'
+import '@/assets/js/directives/vue-rpage.js'
 
 Vue.config.productionTip = false
 Vue.prototype.$xhr = xhr

@@ -6,15 +6,21 @@
     <base-select v-model="value"
       :config='config'
       :options='options'></base-select>
+    <p class='title'>proposal-optional-chaining</p>
+    <p class='indent'>项目已经配置了可选链（proposal-optional-chaining）的支持，你可以像这样写代码<code>var street = user.address?.street</code>。更多关于proposal-optional-chaining的信息请访问<a href='https://github.com/tc39/proposal-optional-chaining'>这里</a></p>
+    <p class="title">自动行高的<code>textarea</code></p>
+    <auto-text-area v-model="ata"></auto-text-area>
   </div>
 </template>
 <script>
 import BaseSelect from '@/components/base/base-select.vue'
+import AutoTextArea from '@/components/base/auto-text-area.vue'
 // https://cn.vuejs.org/v2/style-guide/#组件-实例的选项的顺序-推荐
 export default {
   name: 'UsefulComp',
   components: {
-    BaseSelect
+    BaseSelect,
+    AutoTextArea
   },
   model: {},
   props: {},
@@ -46,7 +52,8 @@ export default {
       config: {
         value: 'value',
         label: 'label'
-      }
+      },
+      ata: ''
     }
   },
   computed: {},
