@@ -41,6 +41,11 @@ const routes = [
     component: () => import('../views/aspect-ratio.vue')
   },
   {
+    path: '/thridpart',
+    name: 'thridpart',
+    component: () => import('../views/thrid-part.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

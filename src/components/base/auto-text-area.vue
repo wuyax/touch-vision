@@ -41,8 +41,8 @@ export default {
   methods: {
     inputValue(e) {
       let value = e.target.value
+      this.currentInput = value
       if (!e.target.composing) {
-        this.currentInput = value
         this.$emit('change', value)
       }
     },
