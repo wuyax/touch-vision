@@ -71,17 +71,13 @@
       "overflow-x",
       "overflow-y",
       "clip",
-      "zoom"
-    ],
-    [
+      "zoom",
       "position",
       "top",
       "right",
       "bottom",
       "left",
-      "z-index"
-    ],
-    [
+      "z-index",
       "table-layout",
       "empty-cells",
       "caption-side",
@@ -90,17 +86,13 @@
       "list-style",
       "list-style-position",
       "list-style-type",
-      "list-style-image"
-    ],
-    [
+      "list-style-image",
       "-webkit-box-orient",
       "-webkit-box-direction",
       "-webkit-box-decoration-break",
       "-webkit-box-pack",
       "-webkit-box-align",
-      "-webkit-box-flex"
-    ],
-    [
+      "-webkit-box-flex",
       "width",
       "min-width",
       "max-width",
@@ -178,9 +170,7 @@
       "-webkit-border-image-repeat",
       "-moz-border-image-repeat",
       "-o-border-image-repeat",
-      "-o-border-image-repeat"
-    ],
-    [
+      "-o-border-image-repeat",
       "color",
       "background",
       "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader",
@@ -200,9 +190,7 @@
       "-webkit-background-size",
       "-moz-background-size",
       "-o-background-size",
-      "background-size"
-    ],
-    [
+      "background-size",
       "outline",
       "outline-width",
       "outline-style",
@@ -217,9 +205,7 @@
       "box-shadow",
       "filter:progid:DXImageTransform.Microsoft.gradient",
       "-ms-filter:\\'progid:DXImageTransform.Microsoft.gradient",
-      "text-shadow"
-    ],
-    [
+      "text-shadow",
       "font",
       "font-family",
       "font-size",
@@ -262,9 +248,7 @@
       "-ms-word-wrap",
       "word-wrap",
       "-ms-word-break",
-      "word-break"
-    ],
-    [
+      "word-break",
       "-webkit-transition",
       "-moz-transition",
       "-ms-transition",
@@ -339,9 +323,7 @@
       "-moz-animation-direction",
       "-ms-animation-direction",
       "-o-animation-direction",
-      "animation-direction"
-    ],
-    [
+      "animation-direction",
       "content",
       "quotes",
       "counter-reset",
