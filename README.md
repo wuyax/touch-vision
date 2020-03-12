@@ -3,16 +3,16 @@
 
 ## TOC
 
-- 使用
-- 适配
-- 1px问题
-- 代理
-- 模版
-- 组件
-- 安全
-- `es-lint`和`prettier`集成
-- 其他
-
+- [使用](#使用)
+- [适配](#适配)
+- [1px问题](#1px问题)
+- [代理](#代理)
+- [模版](#模版)
+- [组件](#组件)
+- [安全](#安全)
+- [es-lint和prettier集成](#es-lint和prettier集成)
+- [其他](#其他)
+- [TODO](#TODO)
   
 ## 使用
 
@@ -75,6 +75,7 @@ npm run build
 ```
 ### 禁止转换
 在不需要把`px`转换为`vw`的时候，首先在对应的元素`（html）`中添加配置中指定的类名`.ignore`或`.hairlines`(`.hairlines`一般用于设置`border-width:0.5px`的元素中)：
+
 html
 ```html
 <div class="box ignore"></div>
@@ -125,7 +126,9 @@ html
 正是因为有以上这些概念，因此，设计稿上的`1px`是无法直接实现的。本模版也集成了**一像素问题**的解决方案。
 
 ### postcss-write-svg方案
-`postcss-write-svg`插件主要用来处理移动端`1px`的解决方案。该插件主要使用的是`border-image`和`background`来做`1px`的相关处理。比如源代码：
+`postcss-write-svg`插件主要用来处理移动端`1px`的解决方案。该插件主要使用的是`border-image`和`background`来做`1px`的相关处理。
+
+源代码：
 ```css
 @svg 1px-border {
   height: 2px;
@@ -149,7 +152,7 @@ html
 }
 ```
 ### transform: scale(0.5) 方案
-1.) 设置height: 1px，根据媒体查询结合transform缩放为相应尺寸。
+1. 设置`height: 1px`，根据媒体查询结合`transform`缩放为相应尺寸。
 ```css
 div {
   height:1px;
@@ -159,7 +162,7 @@ div {
   overflow: hidden;
 }
 ```
-2.) 用::after和::befor,设置border-bottom：1px solid #000,然后在缩放-webkit-transform: scaleY(0.5);可以实现两根边线的需求
+2. 用`::after`和`::befor`,设置`border-bottom：1px solid #000;`,然后在缩放`-webkit-transform: scaleY(0.5);`可以实现两根边线的需求
 ```css
 div:after{
   display: inherit;
@@ -169,7 +172,7 @@ div:after{
   transform: scaleY(0.5);
 }
 ```
-3.)用::after设置border：1px solid #000; width:200%; height:200%,然后再缩放scaleY(0.5); 优点可以实现圆角，缺点是按钮添加active比较麻烦。
+3. 用`::after`设置`border：1px solid #000; width:200%; height:200%;`,然后再缩放`scaleY(0.5)` 优点可以实现圆角，缺点是按钮添加`active`比较麻烦。
 ```css
 .div::after {
   content: '';
@@ -184,7 +187,7 @@ div:after{
   transform-origin: top left;
 }
 ```
-4.)媒体查询 + transfrom 对方案1的优化
+4. 媒体查询 + `transfrom` 对方案1的优化
 ```css
 /* 2倍屏 */
 @media only screen and (-webkit-min-device-pixel-ratio: 2.0) {
@@ -267,7 +270,7 @@ Accessibility支持良好的移动端组件既能减少开发者`hack`的时间�
 在处理好常见的前端问题的基础上，该模版还集成了代码加密和代码混淆的功能。开发者可以根据项目实际需求开启或者关闭给功能，也可以对制定文件进行加密和混淆。
 更多配置可以访问`vue.config.js`。
 
-**注意：**开启代码混淆会明显增加代码体积，在流量敏感的环境谨慎开启。
+**注意⚠️**：开启代码混淆会明显增加代码体积，在流量敏感的环境谨慎开启。
 ### 交互安全
 在和后台服务交互过程中不可避免的会传输数据，为了解决敏感数据在网络中明文传输的问题，该模版提供了加密传输的解决方案。
 该方案采用了`AES`加密的方案，对敏感数据加密后再传输给后台服务。
