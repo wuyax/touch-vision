@@ -27,7 +27,7 @@
     <p>编译后的<code>CSS</code></p>
     <pre v-highlightjs="code7"><code class="css"></code></pre>
     <p class="title">第三方组件的适配</p>
-    <p class="indent">开发者可以配置<code>exclude: ['node_modules']</code>来排除第三方组件从px转换为vw。</p>
+    <p class="indent">开发者可以配置<code>exclude: [/(\/|\\)(node_modules)(\/|\\)/]</code>来排除第三方组件从px转换为vw。</p>
   </div>
 </template>
 <script>
