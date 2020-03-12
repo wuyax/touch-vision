@@ -311,7 +311,7 @@ function decrypt(word, key) {
 
 ## 其他
 - 解决移动端双击缩放问题
-- 解决iOS中键盘收起后页面底部有留白的问题
+- 解决iOS中键盘收起后页面底部有留白的问题`<input type='text' v-rpage />`
 - 为iSO中应用切换到后台后倒计时暂停的问题提供解决方案
 
 ## TODO
