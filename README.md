@@ -37,10 +37,10 @@ npm run build
 ```
 
 ## 适配
-移动端适配是本模版的基础功能，也是这个模版的核心功能。本模版摒弃了传统的`rem`适配方案，采用了`vw`适配方案。
-目前设计师出的视觉设计稿，一般都是使用`750px`宽度的，那么`100vw = 750px`，即`1vw = 7.5px`。那么我们可以根据设计图上的`px`值直接转换成对应的`vw`值。手动计算非常繁琐，因此引入了`postcss-px-to-viewport`插件。正确配置该插件以后实现`px`在编译以后转为`vw`。也就是说，在实际开发过程中，开发者不需要进行任何的计算，直接在代码中写`px`，大大节省了开发是的计算时间。
+移动端适配是本模版的基础功能，也是核心功能。本模版摒弃了传统的`rem`适配方案，采用了`vw`适配方案。
+目前设计师出的视觉设计稿，一般都是使用`750px`宽度的，那么`100vw = 750px`，即`1vw = 7.5px`。那么我们可以根据设计图上的`px`值直接转换成对应的`vw`值。手动计算非常繁琐，因此引入了`postcss-px-to-viewport`插件。正确配置该插件以后实现`px`在编译以后转换为`vw`。也就是说，在实际开发过程中，开发者不需要进行任何的计算，直接在代码中写`px`，大大节省了开发时的计算时间。
 ### 插件的配置
-插件的配置文件在`.postcssrc.js`它的基本配置如下：
+插件的配置文件在`.postcssrc.js`中，它的基本配置如下：
 ```js
 'postcss-px-to-viewport': {
   viewportWidth: 750, // (Number) The width of the viewport.
@@ -52,7 +52,7 @@ npm run build
   mediaQuery: false // (Boolean) Allow px to be converted in media queries.
 }
 ```
-开发这可以更具自己的设计稿和需求修改对应的参数。
+开发这可以根据自己的设计稿和需求修改对应的参数。
 源代码：
 ```css
 .vw-test {
@@ -74,13 +74,13 @@ npm run build
 }
 ```
 ### 禁止转换
-在不需要把`px`转换为`vw`的时候，首先在对应的元素`（html）`中添加配置中指定的类名`.ignore`或`.hairlines`(`.hairlines`一般用于设置`border-width:0.5px`的元素中)：
+在不需要把`px`转换为`vw`的时候，在对应的元素`（html）`中添加配置中指定的类名`.ignore`或`.hairlines`(`.hairlines`一般用于设置`border-width:0.5px`的元素中)，该类的`px`不会被转换为`vw`：
 
 html
 ```html
 <div class="box ignore"></div>
 ```
-源代码css：
+源代码：
 ```css
 .box {
   width: 180px;
@@ -109,9 +109,9 @@ html
 }
 ```
 ### 第三方UI框架的适配
-该模版已经集成了优秀的第三方UI框架`Vant`，并做好了适配方案，开发者不需要再为第三方UI框架的适配问题发愁了。
+该模版已经集成了优秀的第三方UI框架`Vant`，并且做好了适配，开发者不需要再为第三方UI框架的适配问题发愁了。
 
-**关于样式覆盖的问题：**
+**关于Vant样式重置的问题：**
 1. `Vant`的`viewport`是基于`375px`设计的，因此我们在`postcss`的配置中做了特殊的配置。
 2. 基于第一条，因此请不要在项目中新建名字中带有`vant`的文件和文件夹。
 3. 所有公共的`Vant`重置样式都应该写在`css/vui-reset.scss`文件中。
