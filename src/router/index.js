@@ -46,6 +46,11 @@ const routes = [
     component: () => import('../views/thrid-part.vue')
   },
   {
+    path: '/chart',
+    name: 'chart',
+    component: () => import('../views/chart.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

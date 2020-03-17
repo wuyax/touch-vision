@@ -8,6 +8,7 @@
     <router-link :to='{ name: "usefulcomp"}'>内置组件</router-link>
     <router-link :to='{ name: "aspectratio"}'>容器</router-link>
     <router-link :to='{ name: "thridpart"}'>第三方组件</router-link>
+    <router-link :to='{ name: "chart"}'>Echarts</router-link>
     <router-link :to='{ name: "About"}'>关于</router-link>
   </nav>
 </template>
