@@ -1,5 +1,5 @@
-# vw-layout
-**vw-layout**是一套开箱即用的移动端开发模版。本模版除了解决了最核心的适配问题以外，还提供了其他的移动端常见问题的解决方案、安全通信以及常用的组件等功能。
+# Touch Vision 指间视界
+**Touch Vision**是一套开箱即用的移动端开发模版。本模版除了解决了最核心的适配问题以外，还提供了其他的移动端常见问题的解决方案、安全通信以及常用的组件等功能。
 
 ## TOC
 
@@ -19,11 +19,11 @@
 
 ### 获取模版
 ```bash
-git clone https://github.com/wuyax/vw-layout.git
+git clone https://github.com/wuyax/touch-vision.git
 ```
 ### 安装依赖
 ```bash
-cd vw-layout
+cd touch-vision
 npm install
 ```
 

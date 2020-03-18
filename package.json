@@ -1,10 +1,11 @@
 {
-  "name": "vw-layout",
+  "name": "touch-vision",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --mode build",
+    "build:dev": "vue-cli-service build --mode build:dev",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.0.3",
     "babel-plugin-import": "^1.13.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
