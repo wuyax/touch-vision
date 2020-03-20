@@ -24,3 +24,18 @@
 @mixin animation($sec: 0.2s, $prop: all, $ease: ease-in) {
   transition: $prop $sec $ease;
 }
+
+$design-dpr: 2;
+
+/* 设置字体大小，不使用rem单位， 根据dpr值分段调整 */
+@mixin font-size($fontSize) {
+  font-size: $fontSize / $design-dpr;
+
+  [data-dpr="2"] & {
+      font-size: $fontSize / $design-dpr * 2;
+  }
+
+  [data-dpr="3"] & {
+      font-size: $fontSize / $design-dpr * 3;
+  }
+}

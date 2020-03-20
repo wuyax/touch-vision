@@ -26,6 +26,9 @@
     <pre v-highlightjs="code6"><code class="css"></code></pre>
     <p>编译后的<code>CSS</code></p>
     <pre v-highlightjs="code7"><code class="css"></code></pre>
+    <p class="title">文字禁止转换</p>
+    <p class="indent">如果文字不需要转换为vw，那么你需要像这样使用：</p>
+    <pre v-highlightjs="code8"><code class="sass"></code></pre>
     <p class="title">第三方组件的适配</p>
     <p class="indent">开发者可以配置<code>exclude: [/(\/|\\)(node_modules)(\/|\\)/]</code>来排除第三方组件从px转换为vw。</p>
   </div>
@@ -107,7 +110,12 @@ export default {
 }
 .hairlines {
   border-bottom: 0.5px solid red;
-}`
+}`,
+    code8:
+`.ignore {
+  @include font-size(28px);
+}
+`
     }
   },
   computed: {},
