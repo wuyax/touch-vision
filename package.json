@@ -12,7 +12,7 @@
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "echarts": "^4.6.0",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^10.1.2",
     "lodash-es": "^4.17.15",
     "vant": "^2.5.4",
     "vue": "^2.6.11",
