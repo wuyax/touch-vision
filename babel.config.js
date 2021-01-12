@@ -9,7 +9,13 @@ let plugins = [
       style: true
     },
     'vant'
-  ]
+  ],
+  ["transform-imports", {
+    "lodash-es": {
+      "transform": "lodash-es/${member}",
+      "preventFullImport": true
+    }
+  }]
 ]
 // 生产环境移除console
 const { NODE_ENV, DROP_CONSOLE } = process.env
