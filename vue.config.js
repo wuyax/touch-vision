@@ -1,4 +1,5 @@
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin
 let webpackPlugins = []
 if (process.env.NODE_ENV === 'production') {
   webpackPlugins.push(new BundleAnalyzerPlugin())
@@ -19,15 +20,15 @@ module.exports = {
           '/api': '/'
         }
       }
+    }
+  },
+  configureWebpack: {
+    externals: {
+      vue: 'Vue',
+      vuex: 'Vuex',
+      'vue-router': 'VueRouter',
+      axios: 'axios'
     },
-    configureWebpack: {
-      externals: {
-        vue: 'Vue',
-        vuex: 'Vuex',
-        'vue-router': 'VueRouter',
-        axios: 'axios'
-      },
-      plugins: webpackPlugins
-    },
+    plugins: webpackPlugins
   }
 }
