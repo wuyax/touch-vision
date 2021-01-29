@@ -15,9 +15,8 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-    <script src="//cdn.bootcss.com/vue/2.6.11/vue.min.js" rel="prefetch"></script>
-    <script src="//cdn.bootcss.com/axios/0.20.0/axios.min.js" rel="prefetch"></script>
-    <script src="//cdn.bootcdn.net/ajax/libs/vuex/3.5.1/vuex.min.js" rel="prefetch"></script>
-    <script src="//cdn.bootcss.com/vue-router/3.2.0/vue-router.min.js" rel="prefetch"></script>
+    <% for (var i in htmlWebpackPlugin.options.cdn) { %>
+      <script src="<%= htmlWebpackPlugin.options.cdn[i] %>" rel="prefetch"></script>
+    <% } %>
   </body>
 </html>
