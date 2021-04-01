@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --mode build",
     "build:dev": "vue-cli-service build --mode build:dev",
-    "analyz": "npm_config_report=true npm run build:dev",
+    "build:analyze": "vue-cli-service build --mode build --analyze",
+    "analyze": "npm_config_report=true npm run build:dev",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

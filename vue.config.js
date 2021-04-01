@@ -7,18 +7,30 @@ const cdn = [
   '//cdn.bootcdn.net/ajax/libs/vuex/3.6.2/vuex.min.js',
   '//cdn.bootcss.com/vue-router/3.5.1/vue-router.min.js'
 ]
+
+let analyze = false
+// 处理通过命令行传递的参数
+process.argv.forEach((item, index) => {
+  console.log(item)
+  if (/analyze$/gi.test(item)) {
+    analyze = true
+  }
+})
+const isCDN = process.env.npm_config_cdn
+
 let webpackPlugins = [],
   externals = {}
 if (isProduction) {
   // 打包分析
-  webpackPlugins.push(new BundleAnalyzerPlugin())
+  analyze && webpackPlugins.push(new BundleAnalyzerPlugin())
   // CDN 排除的package
-  externals = {
-    vue: 'Vue',
-    vuex: 'Vuex',
-    'vue-router': 'VueRouter',
-    axios: 'axios'
-  }
+  isCDN &&
+    (externals = {
+      vue: 'Vue',
+      vuex: 'Vuex',
+      'vue-router': 'VueRouter',
+      axios: 'axios'
+    })
 }
 module.exports = {
   publicPath: './',
@@ -26,7 +38,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://14.205.92.201:8080/', // 接口域名
+        target: 'http://192.168.1.201:8080/', // 接口域名
         changeOrigin: true, //是否跨域
         pathRewrite: {
           '^/api': '/api' //需要rewrite重写的,
@@ -43,7 +55,7 @@ module.exports = {
     plugins: webpackPlugins
   },
   chainWebpack: config => {
-    if (isProduction) {
+    if (isProduction && isCDN) {
       config.plugin('html').tap(args => {
         args[0].cdn = cdn
         return args
