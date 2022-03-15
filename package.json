@@ -15,7 +15,7 @@
     "core-js": "^3.6.4",
     "echarts": "^4.6.0",
     "highlight.js": "^10.5.0",
-    "lodash-es": "^4.17.15",
+    "lodash-es": "^4.17.21",
     "vant": "^2.5.4",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1",
